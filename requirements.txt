@@ -4,7 +4,6 @@ charset-normalizer==3.3.2
 click==8.1.7
 cloudpickle==3.0.0
 deap==1.4.1
-featuretools==1.28.0
 filelock==3.13.1
 Flask==3.0.0
 fsspec==2023.12.2
