@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Prediction API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wine Quality Prediction API Documentation</h1>
+        <p>This documentation provides detailed information about using the Wine Quality Prediction API.</p>
+
+        <h2>Overview</h2>
+        <p>The Wine Quality Prediction API allows for the prediction of wine quality based on chemical properties. This API uses a trained machine learning model and accepts specific attributes of wine for analysis.</p>
+
+        <h2>API Endpoint</h2>
+        <h3>POST /predict</h3>
+        <p>This endpoint accepts JSON data representing the attributes of a wine sample and returns a prediction of its quality.</p>
+
+        <h3>Request Format</h3>
+        <p>The request must be in JSON format with the following attributes:</p>
+        <ul>
+            <!-- List all attributes here -->
+            <li><code>fixed acidity</code>: Float</li>
+            <li><code>volatile acidity</code>: Float</li>
+            <li><code>citric acid</code>: Float</li>
+            <!-- ... -->
+        </ul>
+
+        <h3>Response Format</h3>
+        <p>The response will be a JSON object containing the predicted quality rating:</p>
+        <code>{"predicted_quality": 6}</code>
+
+        <h3>Error Handling</h3>
+        <p>The API provides descriptive error messages in case of invalid input. For example:</p>
+        <code>{"error": "Invalid input for 'fixed acidity'. Expected a numeric value."}</code>
+
+        <h3>Example Request</h3>
+        <p>An example of a valid POST request to the /predict endpoint:</p>
+        <code>
+            fetch('/predict', {<br>
+                &nbsp;&nbsp;method: 'POST',<br>
+                &nbsp;&nbsp;headers: { 'Content-Type': 'application/json' },<br>
+                &nbsp;&nbsp;body: JSON.stringify({<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"fixed acidity": 7.4,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"type": 1<br>
+                &nbsp;&nbsp;})<br>
+            });
+        </code>
+
+        <h3>Example Response</h3>
+        <p>An example response from the API might look like:</p>
+        <code>{"predicted_quality": 6}</code>
+
+        <h2>Contact</h2>
+        <p>For any queries or issues related to the API, please contact [Contact Information].</p>
+
+        <h2>License</h2>
+        <p>[License Information]</p>
+    </div>
+</body>
+</html>
