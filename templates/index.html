@@ -73,6 +73,12 @@
                 }
             }
 
+            // Check for valid 'type' input
+            if (formData["type"] !== 0 && formData["type"] !== 1) {
+                alert("Type must be 0 (for white) or 1 (for red).");
+                return; // Stop the function if 'type' is not 0 or 1
+            }
+
             fetch('/predict', {
                 method: 'POST',
                 headers: {
