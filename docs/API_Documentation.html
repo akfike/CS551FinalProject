@@ -38,6 +38,8 @@
 
         <h2>API Endpoint</h2>
         <h3>POST /predict</h3>
+        <p>Endpoint for wine quality predictions:</p>
+        <code>https://salty-depths-90108-9820ddaf756c.herokuapp.com/predict</code>
         <p>This endpoint accepts JSON data representing the attributes of a wine sample and returns a prediction of its quality.</p>
 
         <h3>Request Format</h3>
@@ -47,7 +49,15 @@
             <li><code>fixed acidity</code>: Float</li>
             <li><code>volatile acidity</code>: Float</li>
             <li><code>citric acid</code>: Float</li>
-            <!-- ... -->
+            <li><code>residual sugar</code>: Float</li>
+            <li><code>chlorides</code>: Float</li>
+            <li><code>free sulfur dioxide</code>: Float</li>
+            <li><code>total sulfure dioxide</code>: Float</li>
+            <li><code>density</code>: Float</li>
+            <li><code>pH</code>: Float</li>
+            <li><code>sulphates</code>: Float</li>
+            <li><code>alcohol</code>: Float</li>
+            <li><code>type</code>: Integer (1 for red, 0 for white)</li>
         </ul>
 
         <h3>Response Format</h3>
@@ -66,7 +76,16 @@
                 &nbsp;&nbsp;headers: { 'Content-Type': 'application/json' },<br>
                 &nbsp;&nbsp;body: JSON.stringify({<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;"fixed acidity": 7.4,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"volatile acidity": 0.700,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"citric acid": 0,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"residual sugar": 1.9,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"chlorides": 0.076,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"free sulfur dioxide": 11,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"total sulfur dioxide": 34,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"density": 0.9978,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"pH": 3.51,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"sulphates": 0.56,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"alcohol": 9.4,<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;"type": 1<br>
                 &nbsp;&nbsp;})<br>
             });
@@ -77,10 +96,8 @@
         <code>{"predicted_quality": 6}</code>
 
         <h2>Contact</h2>
-        <p>For any queries or issues related to the API, please contact [Contact Information].</p>
+        <p>For any queries or issues related to the API, please contact akfike@crimson.ua.edu.</p>
 
-        <h2>License</h2>
-        <p>[License Information]</p>
     </div>
 </body>
 </html>
